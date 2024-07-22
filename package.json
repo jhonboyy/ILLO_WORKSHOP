@@ -1,0 +1,23 @@
+{
+  "name": "2024_illo_workshop",
+  "version": "1.0.0",
+  "description": "Illo Workshop",
+  "main": "index.js",
+  "scripts": {
+    "test": "dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jhonboyy/ILLO_WORKSHOP.git"
+  },
+  "keywords": [
+    "creative",
+    "coding"
+  ],
+  "author": "Jhon Boy x Illo.tv",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jhonboyy/ILLO_WORKSHOP/issues"
+  },
+  "homepage": "https://github.com/jhonboyy/ILLO_WORKSHOP#readme"
+}

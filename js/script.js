@@ -30,7 +30,6 @@ document.addEventListener("mousedown", function(){
 
 })
 
-
 document.addEventListener("mousemove", function(e){
     let mouseX = e.clientX; let mouseY = e.clientY;
     layers[0].style.clipPath = `polygon(${mouseX}px ${mouseY}px, 0 ${map(mouseY, 0, window.innerHeight, 45, 20)}vh, 0 0, ${map(mouseX, 0, window.innerWidth, 45, 5)}vw 0)`;
