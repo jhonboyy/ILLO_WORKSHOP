@@ -1,0 +1,75 @@
+/* #canvas{
+    border: 2px solid black;
+    position:
+} */
+#canvas{
+    width:100vw;
+    height:100vh;
+    position:fixed;
+    top:0px;
+    left:0px;
+}
+.layer{
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0px;
+    left:0px;
+    cursor:pointer;
+}
+
+svg{
+    position: fixed;
+    top:50vh;
+    left:50vw;
+    transform:translate(-50%, -50%);
+    width:400px;
+    pointer-events: none;
+}
+
+#path1{
+    fill: black;
+}
+#path2{
+    fill: white;
+}
+.layer{
+    background:black;
+    clip-path: polygon(0px 0px, 50vw 50vh, 20vw 0px);
+}
+
+.layer:first-child{
+    clip-path: polygon(50vw 50vh, 0 40vh, 0 0, 20vw 0);
+}
+.layer:nth-child(2){
+    clip-path: polygon(50vw 50vh, 20vw 0, 60vw 0);
+    background: blue;
+}
+.layer:nth-child(3){
+    clip-path: polygon(50vw 50vh, 60vw 0, 100vw 0, 100vw 30vh);
+    background: red;
+}
+.layer:nth-child(4){
+    clip-path: polygon(50vw 50vh, 100vw 30vh, 100vw 50vh);
+    background: blue;
+}
+.layer:nth-child(5){
+    clip-path: polygon(50vw 50vh, 100vw 50vh, 100vw 100vh, 80vw 100vh);
+    background: black;
+}
+.layer:nth-child(6){
+    clip-path: polygon(50vw 50vh, 80vw 100vh, 40vw 100vh);
+    background: red;
+}
+.layer:nth-child(7){
+    clip-path: polygon(50vw 50vh, 40vw 100vh, 10vw 100vh);
+    background: blue;
+}
+.layer:nth-child(8){
+    clip-path: polygon(50vw 50vh, 10vw 100vh, 0 100vh, 0 40vh);
+    background: red;
+}
+
+.layer{
+    transition: background 200ms;
+}
