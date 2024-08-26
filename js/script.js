@@ -1,16 +1,5 @@
-let fg = document.getElementById("fg");
-let bg = document.getElementById("bg");
-let c = document.getElementById("canvas");
-
 let layers = document.querySelectorAll(".layer")
-let x, y;
-
-let points = [{x: 0, y: 40},{x:20, y: 0}, {x: 60, y: 0}, {x: 100, y: 30}, {x: 100, y:50}, {x: 80, y: 100}, {x: 40, y:100}, {x:10, y:100}]
-
 let palette = ['#60014C','#FE32C5','#FF5D33','#268549','#0011A8','#04A5FF','#9FF944','#3347FF','#32FE5F','#75FFB8','#FF82E3','#F42E25','#6630FF','#FAFF00','#FF7415']
-
-let center = {x: window.innerWidth/2, y: window.innerHeight/2}
-
 
 for (let i=0;i<layers.length;i++){
         
