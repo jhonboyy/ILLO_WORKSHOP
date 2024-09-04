@@ -28,19 +28,18 @@ function shuffle(array) {
 };
 
 document.addEventListener("mousedown", function () {
-
     shuffle(palette);
     for (let i = 0; i < layers.length; i++) {
         layers[i].style.background = palette[i];
         layers[i].querySelector("path").style.fill = palette[i + 2];
     }
-    
 });
 
 document.addEventListener("mousemove", function(mouse) {
-    let mouseX = mouse.clientX;
-    let mouseY = mouse.clientY;
+    updateClipPaths(mouse.clientX, mouse.clientY);
+});
 
+function updateClipPaths(mouseX, mouseY) {
     const windowWidth = window.innerWidth;
     const windowHeight = window.innerHeight;
 
@@ -55,4 +54,12 @@ document.addEventListener("mousemove", function(mouse) {
     layers[5].style.clipPath = `polygon(${mouseX}px ${mouseY}px, ${scaleX(60, 95)} 100vh, ${scaleX(50, 20)} 100vh)`;
     layers[6].style.clipPath = `polygon(${mouseX}px ${mouseY}px, ${scaleX(50, 20)} 100vh, ${scaleX(15, 5)} 100vh)`;
     layers[7].style.clipPath = `polygon(${mouseX}px ${mouseY}px, ${scaleX(15, 5)} 100vh, 0 100vh, 0 ${scaleY(45, 20)})`;
+};
+
+window.addEventListener("DOMContentLoaded", function() {
+
+    const initialX = window.innerWidth / 2;
+    const initialY = window.innerHeight / 2;
+    updateClipPaths(initialX, initialY);
+
 });
