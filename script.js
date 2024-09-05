@@ -12,16 +12,13 @@ const palette = [
 function applyColors() {
     for (let i = 0; i < layers.length; i++) {
         layers[i].style.background = palette[i];
-        const path = layers[i].querySelector("path");
-        if (path) {
-            path.style.fill = palette[i + 2];
-        }
+        layers[i].querySelector("path").style.fill = palette[i + 2];
     }
-}
+};
 
 function shuffleColours(array) {
     return array.sort(() => Math.random() - 0.5);
-}
+};
 
 document.addEventListener("mousedown", function() {
     applyColors();  
@@ -41,7 +38,7 @@ function createPolygons(mouseX, mouseY) {
     layers[5].style.clipPath = `polygon(${mouseX}px ${mouseY}px, 95vw 100vh, 50vw 100vh)`;
     layers[6].style.clipPath = `polygon(${mouseX}px ${mouseY}px, 50vw 100vh, 20vw 100vh)`;
     layers[7].style.clipPath = `polygon(${mouseX}px ${mouseY}px, 20vw 100vh, 0 100vh, 0 20vh)`;
-}
+};
 
 window.addEventListener("DOMContentLoaded", function() {
     const initialX = window.innerWidth / 2;
